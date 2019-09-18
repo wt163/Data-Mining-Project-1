@@ -12,7 +12,6 @@ ui <- fluidPage(
   plotOutput("hist3")
 )
 server <- function(input, output) {
-  library(Smaciolekscatter)
   output$hist1<-renderPlot({
     TDbinplot(rnorm(input$num),rnorm(input$num),input$res)
   })
